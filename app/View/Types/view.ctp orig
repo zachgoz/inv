@@ -1,0 +1,65 @@
+<div class="actions">
+	<?php echo $this->element('tr_menu'); ?>
+</div>
+
+<div class="types view">
+<h2><?php echo h($type['Type']['name']),'s'; ?></h2>
+
+	<div id="tr_indexview_actions">
+		<div class="actions">
+		<ul>
+			<li>
+			<?php echo $this->Html->link($this->Html->image('tr/Add.png') . " " . __('New Product'), array('controller' => 'products', 'action' => 'add'), array('escape' => false)); ?>
+			</li>
+			<!-- <li><a href="javascript:toggleTrFilter()"><?php echo $this->Html->image('tr/Search.png'); ?> Search / Filter</a></li> -->
+		</ul>
+		</div>
+	</div>
+	
+
+	<div id="filter" style="padding-left: 5px;">
+			<?php echo $this->Filter->filterForm('Product', array('legend' => '')); ?>
+	</div>
+	
+	
+
+<div class="related">
+
+	<?php if (!empty($type['Product'])): ?>
+	<table cellpadding = "0" cellspacing = "0">
+	<tr>
+		<th><?php echo __('Id'); ?></th>
+		<th><?php echo __('Vendor'); ?></th>
+		<th><?php echo __('Model'); ?></th>
+		<th><?php echo __('CPU'); ?></th>
+		<th><?php echo __('RAM'); ?></th>
+		<th><?php echo __('OS'); ?></th>
+		<th><?php echo __('Asset Tag'); ?></th>
+		<th><?php echo __('Notes'); ?></th>
+		<th class="actions"><?php echo __('Actions'); ?></th>
+	</tr>
+	<?php
+		$i = 0;
+		foreach ($type['Product'] as $product): ?>
+		<tr>
+			<td><?php echo $product['id']; ?></td>
+			<td><?php echo $product['Category']['name']; ?></td>
+			<td><?php echo $product['Subcategory']['name']; ?></td>
+ 			<td><?php echo $product['cpu']; ?></td>
+			<td><?php echo $product['ram']; ?></td>
+			<td><?php echo $product['os']; ?></td>
+			<td><?php echo $product['mac']; ?></td>
+			<td><?php echo $product['description']; ?></td>			
+			<td class="actions">
+				<?php echo $this->Html->link(__('View'), array('controller' => 'products', 'action' => 'view', $product['id'])); ?>
+				<?php echo $this->Html->link(__('Checkout'), array('controller' => 'Checkouts','action' => 'add', $product['id'])); ?>
+				<?php echo $this->Html->link(__('Edit'), array('controller' => 'products', 'action' => 'edit', $product['id'])); ?>
+				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'products', 'action' => 'delete', $product['id']), null, __('Are you sure you want to delete # %s?', $product['id'])); ?>
+			</td>
+		</tr>
+	<?php endforeach; ?>
+	</table>
+<?php endif; ?>
+
+</div>
+</div>
