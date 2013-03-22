@@ -1,39 +1,29 @@
-CakePHP
-=======
+Inventory Admin System
 
-[![CakePHP](http://cakephp.org/img/cake-logo.png)](http://www.cakephp.org)
+Based entirely on CakePHP This is a simple inventory system built to keep track of cable modems/routers/gateways and laptops. 
 
-CakePHP is a rapid development framework for PHP which uses commonly known design patterns like Active Record, Association Data Mapping, Front Controller and MVC.
-Our primary goal is to provide a structured framework that enables PHP users at all levels to rapidly develop robust web applications, without any loss to flexibility.
+Key Features
+  -jQuery inventory page lists all devices and laptops and is filterable/searchable from any field
+  -Mac address for each item integrates nicely with barcode scanner to filter by mac
+  -Checkouts allow users to checkout one or multiple items for extended periods of time
+  -Ability to import devices/models/vendors from csv
+  -View count of devices for each vendor
+  -View count of devices for each model
+  -View count of each model in each location
+  -Uses cake php 2.3
+  
+Things that need to be added to be an awesome inventory admin system
+  -Checkout multiple items at a time
+  -Vendors page needs to be formated to suite all the info better
+  -Delete multiple items at a time
+  
+### Install ###
+  1. Copy directory to webserver
+  2. Update default database settings in inv/app/Config/database.php
+  3. Install databaase from  inv/app/Config/Schema/inventory.sql
+  4. Go to inv in a web browser and use the following credentials to login:
+      username: admin@admin.com
+      password: 123456
+  5. Enjoy!
 
-Some Handy Links
-----------------
-
-[CakePHP](http://www.cakephp.org) - The rapid development PHP framework
-
-[Cookbook](http://book.cakephp.org) - THE Cake user documentation; start learning here!
-
-[Plugins](http://plugins.cakephp.org/) - A repository of extensions to the framework
-
-[The Bakery](http://bakery.cakephp.org) - Tips, tutorials and articles
-
-[API](http://api.cakephp.org) - A reference to Cake's classes
-
-[CakePHP TV](http://tv.cakephp.org) - Screen casts from events and video tutorials
-
-[The Cake Software Foundation](http://cakefoundation.org/) - promoting development related to CakePHP
-
-Get Support!
-------------
-
-[Our Google Group](http://groups.google.com/group/cake-php) - community mailing list and forum
-
-[#cakephp](http://webchat.freenode.net/?channels=#cakephp) on irc.freenode.net - Come chat with us, we have cake.
-
-[Q & A](http://ask.cakephp.org/) - Ask questions here, all questions welcome
-
-[Lighthouse](http://cakephp.lighthouseapp.com/) - Got issues? Please tell us!
-
-[![Bake Status](https://secure.travis-ci.org/cakephp/cakephp.png?branch=master)](http://travis-ci.org/cakephp/cakephp)
-
-![Cake Power](https://raw.github.com/cakephp/cakephp/master/lib/Cake/Console/Templates/skel/webroot/img/cake.power.gif)
+Important things to note:
