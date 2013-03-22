@@ -64,8 +64,8 @@ class DATABASE_CONFIG {
 		'persistent' => false,
 		'host' => '127.0.0.1',
 		'login' => 'root',
-		'password' => 'c00pers!.',
-		'database' => 'zen',
+		'password' => 'daytona1',
+		'database' => 'inventory',
 		'prefix' => '',
 		//'encoding' => 'utf8',
 	);
