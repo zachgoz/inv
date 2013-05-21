@@ -42,17 +42,17 @@
     <tbody>
 	<?php foreach ($products as $product): ?>
 	<tr class="hovertable">
-		<td onclick="document.location = '/products/view/<?php echo h($product['Product']['id']); ?>';" >
+		<td onclick="document.location = 'products/view/<?php echo h($product['Product']['id']); ?>';" >
             <?php echo h($product['Product']['id']); ?>&nbsp;</td>
-        <td onclick="document.location = '/products/view/<?php echo h($product['Product']['id']); ?>';" >
+        <td onclick="document.location = 'products/view/<?php echo h($product['Product']['id']); ?>';" >
             <?php echo h($product['Category']['name']); ?>&nbsp;</td>
-        <td onclick="document.location = '/products/view/<?php echo h($product['Product']['id']); ?>';" >
+        <td onclick="document.location = 'products/view/<?php echo h($product['Product']['id']); ?>';" >
             <?php echo h($product['Subcategory']['name']); ?>&nbsp;</td>
-        <td onclick="document.location = '/products/view/<?php echo h($product['Product']['id']); ?>';" >
+        <td onclick="document.location = 'products/view/<?php echo h($product['Product']['id']); ?>';" >
             <?php echo h($product['Product']['location']); ?>&nbsp;</td>
-        <td onclick="document.location = '/products/view/<?php echo h($product['Product']['id']); ?>';" >
+        <td onclick="document.location = 'products/view/<?php echo h($product['Product']['id']); ?>';" >
             <?php echo h($product['Product']['mac']); ?>&nbsp;</td>
-        <td onclick="document.location = '/products/view/<?php echo h($product['Product']['id']); ?>';" >
+        <td onclick="document.location = 'products/view/<?php echo h($product['Product']['id']); ?>';" >
             <?php echo h($product['Product']['description']); ?>&nbsp;</td>
 		<td style="min-width: 155px; cursor: default">
 			<?php echo $this->Html->link($this->Html->image('tr/Checkouts_Add.png') . " " . __('Checkout'), array('controller' => 'Checkouts','action' => 'add', $product['Product']['id']), array('escape' => false, 'class' => 'button')); ?>
