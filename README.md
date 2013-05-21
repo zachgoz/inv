@@ -3,6 +3,7 @@ Inventory Admin System (IAS)
 Working Demo: http://zachgosling.com/inv-master
       username: admin@admin.com
       password: 123456
+      
 Based entirely on CakePHP This is a simple inventory system built to keep track of cable modems/routers/gateways and laptops. 
 
 Key Features
