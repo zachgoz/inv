@@ -52,7 +52,7 @@
 	<?php
 		$i = 0;
 		foreach ($type['Product'] as $product): ?>
-		<tr onclick="document.location = '/products/view/<?php echo $product['id']; ?>';" class="hovertable">
+		<tr onclick="document.location = '/inv-master/products/view/<?php echo $product['id']; ?>';" class="hovertable">
 			<td><?php echo $product['id']; ?></td>
 			<td><?php echo $product['Category']['name']; ?></td>
 			<td><?php echo $product['Subcategory']['name']; ?></td>
